@@ -1,0 +1,53 @@
+ <!-- <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+<% if (typeof errors !== 'undefined') { %>
+<div class="alert alert-danger">
+    <ul>
+        <% errors.forEach(error => { %>
+        <li><%= error.msg %></li>
+        <% }) %>
+    </ul>
+</div>
+<% } %>
+            <form method="post" action="/contact">
+  <div class="mb-3">
+    <label for="nama" class="form-label">Masukan Nama</label>
+    <input type="text" class="form-control" id="nama" name="nama">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Masukan Email</label>
+    <input type="email" class="form-control" id="email" name="email">
+  </div>
+  <div class="mb-3">
+    <label for="nohp" class="form-label">Masukan nohp</label>
+    <input type="text" class="form-control" id="nohp" name="nohp">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+          </div>
+        </div>
+      </div>  -->
+<!-- add.ejs -->
+<% if (!contact) { %>
+
+        <form method="post" action="/contact">
+<div class="mb-3">
+<label for="nama" class="form-label">Masukan Nama</label>
+<input type="text" class="form-control" id="nama" name="nama">
+</div>
+<div class="mb-3">
+<label for="email" class="form-label">Masukan Email</label>
+<input type="email" class="form-control" id="email" name="email">
+</div>
+<div class="mb-3">
+<label for="nohp" class="form-label">Masukan nohp</label>
+<input type="text" class="form-control" id="nohp" name="nohp">
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+       
+<% } else { %>
+  <!-- Display form for editing the contact -->
+  <div class="alert alert-danger">Bahaya</div>
+<% } %>
